@@ -7,15 +7,16 @@
   },
   "dependencies": {
     "body-parser": "~1.13.2",
+    "bootstrap": "*",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "express": "~4.13.1",
-    "express-session": "^1.10.1",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.10.1",
+    "handlebars": "^4.0.10",
     "mongodb": "^2.1.11",
+    "monk": "*",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0",
-    "bootstrap": "*",
-    "monk": "*"
+    "serve-favicon": "~2.3.0"
   }
 }

@@ -13,13 +13,14 @@
         <li><a href="/routines">Routines</a></li>
         <li><a href="/progress">Progress</a></li>
         <li><a href="/exercises">Exercises</a></li>
-        <li><a href="/admin">Admin</a></li>
+        {{#ifCond items.estado '==' 1}}<li><a href="/admin">Admin</a></li>{{/ifCond}}
         {{#if items}}
-            <h1>Welcome {{id}}</h1>
+            <h1>Welcome {{items.name}}</h1>
         {{/if}}
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/profile">Profile</a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>
     </div>
@@ -41,6 +42,9 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <p>
                             {{#if items}}
+                                {{# if items.injuries.pecho}}
+                                    Pecho
+                                {{/if}}
                             {{else}}
                                 <a href="/registro" class="boton btn btn-primary">Registrate</a> <p></p>
                                 <a href="/log" class="boton btn btn-default">Log in</a>
