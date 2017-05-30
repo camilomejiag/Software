@@ -1,0 +1,115 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container"><div class="navbar-header">
+    <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
+      <span class="sr-only">Toogle Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">Xanity</a>
+  </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/routines">Routines</a></li>
+        <li><a href="/progress">Progress</a></li>
+        <li><a href="/exercises">Exercises</a></li>
+        <li><a href="/admin">Admin</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="jumbotron">
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  <div class="col-md-4">
+    <h3>Beneficios</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  </div>
+  <div class="col-md-4">
+    <h3>Comunidad</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="/registro" class="boton btn btn-primary">Registrate</a> <p></p>
+                                <a href="/log" class="boton btn btn-default">Log in</a>
+                            </p>
+  </div><div class="col-md-4">
+    <h3>Bajo Precio</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  </div>
+
+
+<!--<h1>MONGODB - EXERCISE</h1>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content">
+        </div>
+        <div class="input">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Get Data</h3>
+    <a href="/get-data">LOAD DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Title: {{ this.title }}</div>
+                <div>Content: {{ this.content }}</div>
+                <div>Author: {{ this.author }}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+<section class="update">
+    <h3>Update Data</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content">
+        </div>
+        <div class="input">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>
+</section>
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>
