@@ -31,6 +31,7 @@ router.post('/', function(req, res, next) {
       }
     })
   });
+<<<<<<< HEAD
 
   router.get('/', function(req, res, next) {
     if (sesion) {
@@ -44,6 +45,8 @@ router.post('/', function(req, res, next) {
     sesion = false;
     res.render('index');
   });
+=======
+>>>>>>> origin/master
 
 router.post('/insert', function(req, res, next) {
   var item = {
