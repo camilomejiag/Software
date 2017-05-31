@@ -17,6 +17,7 @@
     "mongodb": "^2.1.11",
     "monk": "*",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "jquery": "*"
   }
 }

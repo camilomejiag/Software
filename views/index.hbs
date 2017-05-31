@@ -1,125 +1,128 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container"><div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
-      <span class="sr-only">Toogle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="/" class="navbar-brand">Xanity</a>
-  </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/routines">Routines</a></li>
-        <li><a href="/progress">Progress</a></li>
-        <li><a href="/exercises">Exercises</a></li>
-        {{#ifCond items.estado '==' 1}}<li><a href="/admin">Admin</a></li>{{/ifCond}}
-        {{#if items}}
-            <h1>Welcome {{items.name}}</h1>
+    <a class="navbar-brand" href="/">Xanity</a>
+    {{#ifCond items.estado '==' 1}}
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/admin">Admin</a>
+      </li>
+    </ul>
+    {{/ifCond}}
+    <div class="collapse navbar-collapse" id="navbarExample">
+      {{#if items}}
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/exercises">Exercises</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/routines">Routines</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+      <li class="nav-item">
+          <a class="nav-link attention" href="/log-out" data-toggle="modal" data-target="#login-modal">Sign Out</a>
+        </li>
+      </ul>
+      {{else}}
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link attention" href="/log" data-toggle="modal" data-target="#login-modal">Sign In</a>
+            </li>
+        </ul>
         {{/if}}
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
     </div>
-  </div>
 </nav>
 
 
-  <div class="jumbotron">
 
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </div>
-  <div class="col-md-4">
-    <h3>Beneficios</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-  </div>
-  <div class="col-md-4">
-    <h3>Comunidad</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <p>
-                            {{#if items}}
-                                {{# if items.injuries.pecho}}
-                                    Pecho
-                                {{/if}}
-                            {{else}}
-                                <a href="/registro" class="boton btn btn-primary">Registrate</a> <p></p>
-                                <a href="/log" class="boton btn btn-default">Log in</a>
-                            {{/if}}
-                            </p>
-  </div><div class="col-md-4">
-    <h3>Bajo Precio</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-  </div>
+<header class="masthead">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">XANITY</h1>
+            <hr>
+            {{#if items}}
+              <p id="moto">Welcome {{items.name}}</p>
+              {{else}}
+              <p id="moto">Most personalized fitness app you can find</p>
+              <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
 
 
-<!--<h1>MONGODB - EXERCISE</h1>
-<section class="insert">
-    <h3>Insert Data</h3>
-    <form action="/insert" method="post">
-        <div class="input">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title">
         </div>
-        <div class="input">
-            <label for="content">Content</label>
-            <input type="text" id="content" name="content">
+    </div>
+</header>
+
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <h2 class="section-heading text-white">We've got what you need!</h2>
+                <hr class="light">
+                <p class="text-faded">With this app you can find the best tailor made exercise routine that suits your body type, experience and fitness goals.</p>
+                <a class="btn btn-default btn-xl sr-button" href="#services">Get Started!</a>
+            </div>
         </div>
-        <div class="input">
-            <label for="author">Author</label>
-            <input type="text" id="author" name="author">
-        </div>
-        <button type="submit">INSERT</button>
-    </form>
-</section>
-<section class="get">
-    <h3>Get Data</h3>
-    <a href="/get-data">LOAD DATA</a>
-    <div>
-        {{# each items }}
-            <article class="item">
-                <div>Title: {{ this.title }}</div>
-                <div>Content: {{ this.content }}</div>
-                <div>Author: {{ this.author }}</div>
-                <div>ID: {{ this._id }}</div>
-            </article>
-        {{/each}}
     </div>
 </section>
-<section class="update">
-    <h3>Update Data</h3>
-    <form action="/update" method="post">
-        <div class="input">
-            <label for="id">ID</label>
-            <input type="text" id="id" name="id">
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">At Your Service</h2>
+                <hr class="primary">
+            </div>
         </div>
-        <div class="input">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-hourglass-end text-primary sr-icons"></i>
+                    <h3>24 Service</h3>
+                    <p class="text-muted">Work out whenever you want, at anytime you want with our app.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-bolt text-primary sr-icons" aria-hidden="true"></i>
+                    <h3>Fast Results</h3>
+                    <p class="text-muted">With a personalized routine accommodated to your body, We will garantee the fatest results. </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-chain-broken text-primary sr-icons"></i>
+                    <h3>Break Limits</h3>
+                    <p class="text-muted">Using our handmade routines, you will be able to move forward and break the limits you want to reach your goal.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                    <h3>Stay Healthy</h3>
+                    <p class="text-muted">With our help you will be able to maintain a healthy lifestyle that will provide you with a energy to go about your day to day life.</p>
+                </div>
+            </div>
         </div>
-        <div class="input">
-            <label for="content">Content</label>
-            <input type="text" id="content" name="content">
-        </div>
-        <div class="input">
-            <label for="author">Author</label>
-            <input type="text" id="author" name="author">
-        </div>
-        <button type="submit">UPDATE</button>
-    </form>
+    </div>
 </section>
-</section>
-<section class="delete">
-    <h3>Delete Data</h3>
-    <form action="/delete" method="post">
-        <div class="input">
-            <label for="id">ID</label>
-            <input type="text" id="id" name="id">
-        </div>
-        <button type="submit">DELETE</button>
-    </form>
-</section>
+
+<div class="call-to-action bg-dark">
+    <div class="container text-center">
+        <h2>Join Now!</h2>
+        <a class="btn btn-default btn-xl sr-button" href="/registro"><i class="fa fa-users" aria-hidden="true"></i>
+sign up</a>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,115 @@
+<header class="masthead marginm">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1 class="black">Routines</h1>
+              <a class="btn btn-success btn-xl largo" href="/fuerza">Fuerza</a><p></p>
+              <a class="btn btn-primary btn-xl largo" href="/tonificar">Tonificar</a><p></p>
+              <a class="btn btn-primary btn-xl largo" href="/aumento">Aumento</a><p></p>
+              <a type="submit" href= "/" id="register-btn" value="Login">CANCEL</a>
+            </div></div>
+
+
+                <div class="modal-dialog">
+                      <div class="loginmodal-container">
+                        <div class="black scroll">
+              {{#if user.injuries.pecho}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Pecho "}}
+                      {{#if_eq this.Obj "Fuerza"}}
+                        <article class="item">
+                            <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                            <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                            <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                            <p>--------------</p>
+                        </article>
+                      {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.espalda}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Espalda"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.bicep}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Biceps"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.tricep}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Triceps"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.hombro}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Hombro"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.pierna}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Pierna"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              {{#if user.injuries.abdomen}}
+                {{#each ejercicio }}
+                    {{#if_eq this.Parte "Abdomen"}}
+                    {{#if_eq this.Obj "Fuerza"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Series: {{this.Series}} and Reps: {{this.Reps}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                    {{/if_eq}}
+                    {{/if_eq}}
+                {{/each}}
+              {{/if}}
+              </div>
+    </div>
+  </header>

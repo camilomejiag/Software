@@ -1,28 +1,12 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container"><div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
-      <span class="sr-only">Toogle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="/" class="navbar-brand">Xanity</a>
-  </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/routines">Routines</a></li>
-        <li><a href="/progress">Progress</a></li>
-        <li><a href="/exercises">Exercises</a></li>
-        {{#ifCond items.estado '==' 1}}<li><a href="/admin">Admin</a></li>{{/ifCond}}
-        {{#if items}}
-            <h1>Welcome {{items.name}}</h1>
-        {{/if}}
+<header class="masthead marginm">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1 class="black">Routines</h1>
+              <a class="btn btn-primary btn-xl largo" href="/fuerza">Fuerza</a><p></p>
+              <a class="btn btn-primary btn-xl largo" href="/tonificar">Tonificar</a><p></p>
+              <a class="btn btn-primary btn-xl largo" href="/aumento">Aumento</a><p></p>
+              <a type="submit" href= "/" id="register-btn" value="Login">CANCEL</a>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
+
     </div>
-  </div>
-</nav>
+  </header>

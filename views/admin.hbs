@@ -1,53 +1,36 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container"><div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
-      <span class="sr-only">Toogle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="/" class="navbar-brand">Xanity</a>
-  </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/routines">Routines</a></li>
-        <li><a href="/progress">Progress</a></li>
-        <li><a href="/exercises">Exercises</a></li>
-        {{#ifCond items.estado '==' 1}}<li><a href="/admin">Admin</a></li>{{/ifCond}}
-        {{#if items}}
-            <h1>Welcome {{items.name}}</h1>
-        {{/if}}
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
+<header class="masthead marginm">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1 class="black">Delete User</h1>
+              <form action="/delete" method="post">
+                  <div class="input">
+                      <input type="text" id="username" name="username" placeholder="Username">
+                  </div>
+                  <button type="submit" name="login" class="login loginmodal-submit" value="Login">DELETE</button>
+                  <p></p>
+              </form>
+          </div>
     </div>
-  </div>
-</nav>
-<section class="delete top">
-    <h3>Delete User</h3>
-    <form action="/delete" method="post">
-        <div class="input">
-            <label for="username">username</label>
-            <input type="text" id="username" name="username">
-        </div>
-        <button type="submit">DELETE</button>
-    </form>
-</section>
 
-<section class="get top">
-    <h3>Userlist</h3>
-    <a href="/get-data">LOAD DATA</a>
-    <div>
-        {{# each items }}
-            <article class="item">
-                <div>Name: {{ this.name }}</div>
-                <div>Email: {{ this.email }}</div>
-                <div>Username: {{ this.username }}</div>
-                <div>ID: {{ this._id }}</div>
-            </article>
-        {{/each}}
-    </div>
-</section>
+      <div class="modal-dialog">
+            <div class="loginmodal-container">
+              <h3 class="black">Userlist</h3>
+              <a style="color: #ffffff; background-color: #BF3734;" class="login loginmodal-submit" href="/get-data">LOAD DATA</a>
+              <div class="black scroll">
+                <p></p>
+                  {{# each items }}
+                      <article class="item">
+                          <div>Name: {{ this.name }}</div>
+                          <div>Email: {{ this.email }}</div>
+                          <div>Username: {{ this.username }}</div>
+                          <div>ID: {{ this._id }}</div>
+                          <p>--------------</p>
+                      </article>
+                  {{/each}}
+
+              </div>
+              <p></p>
+              <a type="submit" href= "/" id="register-btn" value="Login">CANCEL</a>
+            </div>
+      </div>
+    </header>

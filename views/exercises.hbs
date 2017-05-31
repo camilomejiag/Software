@@ -1,0 +1,98 @@
+<header class="masthead marginm">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1 class="black">Exercises</h1>
+              <a style="color: #ffffff; background-color: #BF3734;" class="login loginmodal-submit botonraro" href="/get-exercises">LOAD EXERCISES</a>
+              <div class="black scroll">
+                {{#if user.injuries.pecho}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Pecho "}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.espalda}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Espalda"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.bicep}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Biceps"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.tricep}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Triceps"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.hombro}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Hombro"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.pierna}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Pierna"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+                {{#if user.injuries.abdomen}}
+                  {{#each ejercicio }}
+                      {{#if_eq this.Parte "Abdomen"}}
+                      <article class="item">
+                          <div>Ejercicio: {{ this.Parte }} {{ this.Ejercicio }}</div>
+                          <div>Objetivo: {{this.Obj}}</div>
+                          <a href="{{this.Link}}" target="_blank">Video Tutorial</a>
+                          <p>--------------</p>
+                      </article>
+                      {{/if_eq}}
+                  {{/each}}
+                {{/if}}
+
+              </div>
+              <p></p>
+              <a type="submit" href= "/" id="register-btn" value="Login">CANCEL</a>
+
+
+    </div>
+  </header>
