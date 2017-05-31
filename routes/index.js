@@ -58,7 +58,7 @@ router.post('/insert', function(req, res, next) {
     password: req.body.password,
     estado: 0,
     injuries: {
-      pecho: req.body.pecho ? true : false,
+      pecho: req.body.Pecho? true : false,
       espalda: req.body.espalda ? true : false,
       bicep: req.body.bicep ? true : false,
       tricep: req.body.tricep ? true : false,
@@ -132,7 +132,7 @@ router.post('/update', function(req, res, next) {
     password: req.body.password,
     estado: 0,
     injuries: {
-      pecho: req.body.pecho ? true : false,
+      pecho: req.body.Pecho? true : false,
       espalda: req.body.espalda ? true : false,
       bicep: req.body.bicep ? true : false,
       tricep: req.body.tricep ? true : false,
