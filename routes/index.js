@@ -31,7 +31,10 @@ router.post('/', function(req, res, next) {
       }
     })
   });
-<<<<<<< HEAD
+
+  router.get('/newExercise', function(req, res, next) {
+    res.render('newExercise');
+  });
 
   router.get('/', function(req, res, next) {
     if (sesion) {
@@ -45,8 +48,7 @@ router.post('/', function(req, res, next) {
     sesion = false;
     res.render('index');
   });
-=======
->>>>>>> origin/master
+
 
 router.post('/insert', function(req, res, next) {
   var item = {
@@ -66,6 +68,19 @@ router.post('/insert', function(req, res, next) {
     }
   };
   userData.insert(item);
+  res.redirect('/');
+});
+
+router.post('/insert-exercise', function(req, res, next) {
+  var item =  {
+   "Parte": req.body.parte,
+   "Ejercicio": req.body.ejercicio,
+   "Reps": req.body.repeticiones,
+   "Series": req.body.series,
+   "Obj": req.body.objetivo,
+   "Link": req.body.link
+ };
+  userRoutine.insert(item);
   res.redirect('/');
 });
 
