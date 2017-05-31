@@ -1,60 +1,32 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container"><div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
-      <span class="sr-only">Toogle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="/" class="navbar-brand">Xanity</a>
-  </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/routines">Routines</a></li>
-        <li><a href="/progress">Progress</a></li>
-        <li><a href="/exercises">Exercises</a></li>
-        {{#ifCond items.estado '==' 1}}<li><a href="/admin">Admin</a></li>{{/ifCond}}
-        {{#if items}}
-            <h1>Welcome {{items.name}}</h1>
-        {{/if}}
+<header class="masthead marginm">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1 class="black">Register</h1>
+              <form action="/insert" method="post">
+                  <div class="input">
+                      <input type="text" id="Name" name="name" placeholder="Name">
+                  </div>
+                  <div class="input">
+                      <input type="text" id="email" name="email" placeholder="Email">
+                  </div>
+                  <div class="input">
+                      <input type="text" id="username" name="username" placeholder="Username">
+                  </div>
+                  <div class="input">
+                      <input type="password" id="password" name="password" placeholder="Password">
+                  </div><br>
+                  <div class = "black">
+                      <label  for="Injuries">Musculos a fortalecer</label><br>
+                      <input  type="checkbox" name="pecho">Pecho<br>
+                      <input  type="checkbox" name="espalda">Espalda<br>
+                      <input  type="checkbox" name="tricep">Tricep<br>
+                      <input  type="checkbox" name="bicep">Bicep<br>
+                      <input  type="checkbox" name="hombro">Hombro<br>
+                      <input  type="checkbox" name="pierna">Pierna<br>
+                      <input  type="checkbox" name="abdomen">Abdomen<br><br>
+                  </div>
+                  <button type="submit">INSERT</button>
+              </form>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
     </div>
-  </div>
-</nav>
-<section class="insert top">
-    <h3>Registro</h3>
-    <form action="/insert" method="post">
-        <div class="input">
-            <label for="Name">Name</label>
-            <input type="text" id="Name" name="name">
-        </div>
-        <div class="input">
-            <label for="Email">Email</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="input">
-            <label for="Username">Username</label>
-            <input type="text" id="username" name="username">
-        </div>
-        <div class="input">
-            <label for="Password">Password</label>
-            <input type="password" id="password" name="password">
-        </div><br>
-        <div>
-            <label for="Injuries">Musculos a fortalecer</label><br>
-            <input type="checkbox" name="pecho">Pecho<br>
-            <input type="checkbox" name="espalda">Espalda<br>
-            <input type="checkbox" name="tricep">Tricep<br>
-            <input type="checkbox" name="bicep">Bicep<br>
-            <input type="checkbox" name="hombro">Hombro<br>
-            <input type="checkbox" name="pierna">Pierna<br>
-            <input type="checkbox" name="abdomen">Abdomen<br><br>
-        </div>
-        <button type="submit">INSERT</button>
-    </form>
-</section>
+  </header>

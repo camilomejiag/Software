@@ -27,16 +27,10 @@ router.post('/', function(req, res, next) {
         globalId = items._id;
         console.log(globalId);
       }
-
     })
-    //data.on('success', function(docs) {
-    //res.render('index', {items: data});
-    //console.log("error");
   });
-//});
 
 router.post('/insert', function(req, res, next) {
-   //var pecho = req.body.pecho ? true : false;
   var item = {
     name: req.body.name,
     email: req.body.email,
@@ -51,7 +45,6 @@ router.post('/insert', function(req, res, next) {
       hombro: req.body.hombro ? true : false,
       pierna: req.body.pierna ? true : false,
       abdomen: req.body.abdomen ? true : false
-
     }
   };
   userData.insert(item);
@@ -74,12 +67,7 @@ router.get('/get-data', function(req, res, next) {
         var items = doc;
         res.render('admin', {'items' : doc});
       }
-
     });
-  //var data = userData.find({});
-  //data.on('success', function(docs) {
-    //res.render('admin', {items: docs});
-  //});
 });
 
 router.post('/update', function(req, res, next) {
@@ -87,14 +75,21 @@ router.post('/update', function(req, res, next) {
     name: req.body.name,
     email: req.body.email,
     username: req.body.username,
-    password: req.body.password
-  };
-  //var id = req.body.id;
+    password: req.body.password,
+    estado: 0,
+    injuries: {
+      pecho: req.body.pecho ? true : false,
+      espalda: req.body.espalda ? true : false,
+      bicep: req.body.bicep ? true : false,
+      tricep: req.body.tricep ? true : false,
+      hombro: req.body.hombro ? true : false,
+      pierna: req.body.pierna ? true : false,
+      abdomen: req.body.abdomen ? true : false
 
-  //userData.update({"username": username})
+    }
+  };
   userData.update({"_id": db.id(globalId)}, item);
   res.render('index');
-  //userData.updateById(id, item);
 });
 
 router.get('/admin', function(req, res, next) {
@@ -102,9 +97,8 @@ router.get('/admin', function(req, res, next) {
 });
 
 router.post('/delete', function(req, res, next) {
-  var id = req.body.username; 
+  var id = req.body.username;
    userData.remove({"username": id});
-  //userData.removeById(id);
   res.render('admin');
 });
 

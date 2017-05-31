@@ -1,0 +1,83 @@
+.register-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: auto;
+    text-align: center;
+    background: #dddddd;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 70px;
+}
+#register-logo{
+    display: inline-block;
+    font-weight: 700;
+    color: #BF3734;
+    border-top: 3px solid #BF3734;
+    border-bottom: 3px solid #BF3734;
+    margin-bottom: 30px;
+}
+
+.register-form{
+    border: 3px solid #BF3734;
+    border-radius: 25px;
+    background: #FFFFFF;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.register-input {
+    border-radius: 10px;
+}
+
+.left-col{
+    display: inline-block;
+    padding: 10px 50px
+}
+
+
